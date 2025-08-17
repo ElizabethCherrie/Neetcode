@@ -8,7 +8,7 @@ class Solution:
         stack = []
         for _ in range(n + 1):
             stack.append([])
-        stack[0] = [""]
+        stack[0] = [""] 
         for each_list in range(n+1):
             for ins_out in range(each_list):
                 for left in stack[ins_out]:
