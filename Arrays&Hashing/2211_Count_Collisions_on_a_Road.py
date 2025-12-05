@@ -17,3 +17,23 @@ Other than that, cars cannot change their state or direction of motion.
 Return the total number of collisions that will happen on the road.
 
 """
+
+class Solution:
+    def countCollisions(self, directions: str) -> int:
+    
+        total = 0
+        k = 0
+        j = len(directions) - 1
+
+        while k <= j and directions[k] == "L":
+            k += 1
+        
+        while j >= 0 and directions[j] == "R":
+            j -= 1
+
+        for i in directions[k:j + 1]:
+
+            if i != "S":
+                total += 1
+        
+        return total
